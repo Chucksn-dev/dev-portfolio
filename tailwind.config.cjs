@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -11,6 +15,8 @@ module.exports = {
         ubuntu: ["Ubuntu", "sans-serif"],
         unbounded: ["Unbounded", "cursive"],
       },
+
+      textShadow: { "text-shadow-1": "0 0 2px  rgb(234, 179, 8)" }, //yellow glow
 
       animation: {
         "spin-slow": "spin 2s linear infinite",
@@ -25,5 +31,17 @@ module.exports = {
       }),
     },
   },
-  plugins: [],
+
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };

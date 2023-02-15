@@ -15,7 +15,7 @@ function AnimateOnRevealRight({ children }) {
       transition: { delay: 0.2, duration: 0.5, ease: "linear" },
     },
   };
-  console.log(inView);
+
   return (
     <motion.div
       ref={ref}
