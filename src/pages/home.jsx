@@ -1,4 +1,9 @@
 import { TypeAnimation } from "react-type-animation";
+import {
+  AnimateOnRevealLeft,
+  AnimateOnRevealRight,
+} from "../components/animateOnReveal";
+import { Fade } from "react-awesome-reveal";
 
 function Home() {
   return (
@@ -30,12 +35,29 @@ function Home() {
               />
             </div>
           </div>
-          <div className="about-section bg-white dark:bg-neutral-900 w-full p-4 font-mono ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-            doloribus adipisci ipsum officiis animi tempore dolore eveniet cum
-            saepe, error debitis dolores beatae dicta est assumenda sit, ratione
-            iusto hic. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Eum doloribus
+
+          <div className="content  bg-white dark:bg-neutral-900 w-full">
+            <AnimateOnRevealRight>
+              <div className="about-section text-xl py-16 px-16 font-unbounded ">
+                <span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  doloribus adipisci ipsum officiis animi tempore dolore eveniet
+                  cum saepe, error debitis dolores beatae dicta est assumenda
+                  sit, ratione iusto hic. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Eum doloribus Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Eum doloribus adipisci ipsum
+                  officiis animi tempore dolore eveniet cum saepe, error debitis
+                  dolores beatae dicta est assumenda sit, ratione iusto hic.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  doloribus Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Eum doloribus adipisci ipsum officiis animi tempore
+                  dolore eveniet cum saepe, error debitis dolores beatae dicta
+                  est assumenda sit, ratione iusto hic. Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Eum doloribus Lorem ipsum
+                  dolor sit amet
+                </span>
+              </div>
+            </AnimateOnRevealRight>
           </div>
         </div>
       </div>
