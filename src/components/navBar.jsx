@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 function NavBar({ darkMode, setDarkMode }) {
   const handleThemeToggle = () => {
     setDarkMode(!darkMode);
   };
+
+  const menuIsOPen = useSelector((state) => state.hamburgerMenuStatus);
 
   const introVariant = {
     initial: { opacity: 0 },
@@ -20,7 +23,9 @@ function NavBar({ darkMode, setDarkMode }) {
 
   return (
     <motion.div
-      className="nav hidden  sm:flex flex-col justify-around items-center h-1/2 w-14 sm:w-16 p-1 bg-black/90 dark:bg-black/30 rounded-full fixed right-1 sm:right-2 lg:right-4 top-1/2 -translate-y-1/2 text-xs"
+      className={`nav ${
+        menuIsOPen ? "flex" : "hidden"
+      }  sm:flex flex-col justify-around items-center h-1/2 w-14 sm:w-16 p-1 bg-black/90 dark:bg-black/30 rounded-full fixed right-1 sm:right-2 lg:right-4 top-1/2 -translate-y-1/2 text-xs`}
       variants={introVariant}
       animate="animate"
       initial="initial"
