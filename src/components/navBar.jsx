@@ -1,13 +1,30 @@
-import { useState } from "react";
+import { motion } from "framer-motion";
 
-function NavBar() {
-  const [darkMode, setDarkMode] = useState(true);
-
+function NavBar({ darkMode, setDarkMode }) {
   const handleThemeToggle = () => {
     setDarkMode(!darkMode);
   };
+
+  const introVariant = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+
+      transition: {
+        delay: 1,
+        duration: 5,
+        ease: "linear",
+      },
+    },
+  };
+
   return (
-    <div className="nav flex flex-col justify-around items-center h-1/2 w-14 sm:w-16 p-1 bg-black/90 rounded-full fixed right-4 top-1/2 -translate-y-1/2 text-xs">
+    <motion.div
+      className="nav hidden  sm:flex flex-col justify-around items-center h-1/2 w-14 sm:w-16 p-1 bg-black/90 dark:bg-black/30 rounded-full fixed right-1 sm:right-2 lg:right-4 top-1/2 -translate-y-1/2 text-xs"
+      variants={introVariant}
+      animate="animate"
+      initial="initial"
+    >
       <img src="../src/assets/home.svg" alt="home" className="home  p-3" />
       <img src="../src/assets/about.svg" alt="about" className="about  p-3" />
       <img
@@ -16,7 +33,7 @@ function NavBar() {
         className="home  p-3"
       />
       <img
-        src="../src/assets/contact.svg"
+        src="../src/assets/contact2.svg"
         alt="contact"
         className="contact  p-3"
       />
@@ -39,7 +56,7 @@ function NavBar() {
           />
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

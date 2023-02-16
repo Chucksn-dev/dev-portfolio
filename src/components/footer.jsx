@@ -1,10 +1,17 @@
-function Footer() {
+function Footer({ darkMode }) {
   let year = new Date().getFullYear();
   return (
-    <div className="footer flex flex-col items-center pt-3 pb-28  w-full shadow-c-1-top  dark:bg-neutral-900 lg:pt-4 text-teal-600 ">
-      <div className="footer-links flex justify-center gap-x-8 lg:gap-x-12 hover:cursor-pointer    ">
+    <div className="footer flex flex-col items-center p-3  w-screen shadow-c-1-top  dark:bg-neutral-900 lg:pt-4 text-teal-600 ">
+      <div className="footer-links flex justify-center gap-x-8 lg:gap-x-12 hover:cursor-pointer mb-16 mt-2">
         <a href="https://github.com/chucksn" rel="noreferrer" target="_blank">
-          <img src="../src/assets/github.svg" alt="github" />
+          <img
+            src={
+              darkMode
+                ? "../src/assets/github2.svg"
+                : "../src/assets/github.svg"
+            }
+            alt="github"
+          />
         </a>
         <a
           href="https://twitter.com/chuckfugee?t=fDFd4mEuIOOvFJLhSXnFNA&s=09"
@@ -24,7 +31,7 @@ function Footer() {
           <img src="../src/assets/linkedin.svg" alt="linkedin" />
         </a>
       </div>
-      <div className="footer-text flex flex-col items-center mt-2  lg:mt-4">
+      <div className="footer-text flex flex-col items-center  lg:mt-4">
         <span className=" block text-sm font-medium lg:text-base">
           Developed with ReactJS
         </span>

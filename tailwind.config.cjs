@@ -16,7 +16,10 @@ module.exports = {
         unbounded: ["Unbounded", "cursive"],
       },
 
-      textShadow: { "text-shadow-1": "0 0 2px  rgb(234, 179, 8)" }, //yellow glow
+      textShadow: {
+        "text-shadow-1": "0 0 2px  rgb(234, 179, 8)", //yellow glow
+        "text-shadow-2": "0 0 3px  rgb(255, 255, 255)", //white glow
+      },
 
       animation: {
         "spin-slow": "spin 2s linear infinite",

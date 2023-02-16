@@ -1,14 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/footer";
 import NavBar from "../components/navBar";
+import { useState } from "react";
 
 function SharedLayout() {
+  const [darkMode, setDarkMode] = useState(true);
+
   return (
-    <>
-      <NavBar />
+    <div className={darkMode ? "dark" : ""}>
+      <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Outlet />
-      <Footer />
-    </>
+      <Footer darkMode={darkMode} />
+    </div>
   );
 }
 
