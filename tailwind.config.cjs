@@ -19,6 +19,11 @@ module.exports = {
       textShadow: {
         "text-shadow-1": "0 0 2px  rgb(234, 179, 8)", //yellow glow
         "text-shadow-2": "0 0 3px  rgb(255, 255, 255)", //white glow
+        "text-shadow-3": "0 0 3px  rgb(0, 0, 0)", //black glow
+      },
+
+      boxShadow: {
+        "shadow-c1": "0 0 6px 1px  rgb(190, 190, 190)", //black glow
       },
 
       animation: {

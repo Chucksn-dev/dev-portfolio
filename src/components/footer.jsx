@@ -1,7 +1,7 @@
 function Footer({ darkMode }) {
   let year = new Date().getFullYear();
   return (
-    <div className="footer flex flex-col items-center p-3  w-screen shadow-c-1-top  dark:bg-neutral-900 lg:pt-4 text-teal-600 ">
+    <div className="footer flex flex-col items-center p-3  w-screen shadow-c-1-top bg-gray-300  dark:bg-neutral-900 lg:pt-4 text-teal-600 ">
       <div className="footer-links flex justify-center gap-x-8 lg:gap-x-12 hover:cursor-pointer mb-16 mt-2">
         <a href="https://github.com/chucksn" rel="noreferrer" target="_blank">
           <img

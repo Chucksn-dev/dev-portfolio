@@ -10,7 +10,7 @@ function HamburgerMenu({ darkMode }) {
   };
   return (
     <div
-      className="hamburger-menu w-10 h-10 flex justify-center fixed right-4 top-4 sm:hidden"
+      className="hamburger-menu w-10 h-10 flex justify-center fixed right-4 top-4 z-40 md:hidden"
       onClick={handleHamburgerMenu}
     >
       {!menuIsOPen && (
