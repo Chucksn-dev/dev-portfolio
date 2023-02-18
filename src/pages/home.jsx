@@ -1,6 +1,9 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Icon from "../components/icon";
+import { iconData } from "../iconData";
+import ProgressBar from "react-animated-progress-bar";
 
 const introVariant_left = {
   initial: { opacity: 0, x: "-100vw" },
@@ -46,8 +49,11 @@ const scrollReveal_up = {
 };
 
 function Home() {
-  const [ref1, inView1] = useInView();
-  const [ref2, inView2] = useInView();
+  const [ref1, inView1] = useInView({ triggerOnce: true });
+  const [ref2, inView2] = useInView({ triggerOnce: true });
+  const [ref3, inView3] = useInView({ triggerOnce: true });
+  const [ref4, inView4] = useInView({ triggerOnce: true });
+  const [ref5, inView5] = useInView({ triggerOnce: true });
 
   return (
     <>
@@ -106,9 +112,11 @@ function Home() {
             </motion.div>
           </div>
         </div>
-        <div className="content text-zinc-700 bg-gray-300 dark:bg-neutral-900 dark:text-gray-200 p-8 md:p-12 md:pr-28  w-screen">
+        <div
+          className="content text-zinc-700 bg-gray-300 dark:bg-neutral-900 dark:text-gray-200 p-8 md:p-12 md:pr-28  w-screen"
+          id="about"
+        >
           <motion.div
-            id="about"
             className="about-section text-lg font-sans dark:bg-zinc-700 p-6 rounded-xl shadow shadow-gray-400 dark:shadow-none"
             variants={scrollReveal_up}
             initial="hidden"
@@ -152,6 +160,31 @@ function Home() {
               </div>
             </div>
           </motion.div>
+          <motion.div
+            className="skills p-6 mt-16 lg:mt-24 md:px-16 lg:px-40"
+            variants={scrollReveal_up}
+            initial="hidden"
+            animate={inView2 ? "visible" : "hidden"}
+            ref={ref2}
+            exit="hidden"
+          >
+            <span className="header-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
+              MY SKILLS
+            </span>
+            <span className="block m-4 text-center font-unbounded text-lg text-yellow-600">
+              Skills and Tools
+            </span>
+            <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
+              {iconData.map((data, index) => (
+                <Icon key={index} icon_name={data.name} icon_path={data.path} />
+              ))}
+            </div>
+          </motion.div>
+          <div className="proficiency mt-8 lg:mt-10">
+            <span className="block m-4 text-center font-unbounded text-lg text-yellow-600">
+              Proficiency
+            </span>
+          </div>
         </div>
       </div>
     </>
