@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Icon from "../components/icon";
 import { iconData } from "../iconData";
-import ProgressBar from "react-animated-progress-bar";
+import ProgressBar from "../components/progressBar";
 
 const introVariant_left = {
   initial: { opacity: 0, x: "-100vw" },
@@ -171,7 +171,7 @@ function Home() {
             <span className="header-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
               MY SKILLS
             </span>
-            <span className="block m-4 text-center font-unbounded text-lg text-yellow-600">
+            <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
               Skills and Tools
             </span>
             <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
@@ -180,10 +180,21 @@ function Home() {
               ))}
             </div>
           </motion.div>
-          <div className="proficiency mt-8 lg:mt-10">
-            <span className="block m-4 text-center font-unbounded text-lg text-yellow-600">
+          <div
+            className="proficiency mt-8 lg:mt-10 sm:px-20 md:px-24 lg:px-48"
+            ref={ref3}
+          >
+            <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
               Proficiency
             </span>
+            {iconData.map((data, index) => (
+              <ProgressBar
+                key={index}
+                inView3={inView3}
+                name={data.name}
+                progressLimit={data.proficiency}
+              />
+            ))}
           </div>
         </div>
       </div>
