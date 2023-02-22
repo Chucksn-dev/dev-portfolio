@@ -4,6 +4,9 @@ import { useInView } from "react-intersection-observer";
 import Icon from "../components/icon";
 import { iconData } from "../iconData";
 import ProgressBar from "../components/progressBar";
+import { Link } from "react-router-dom";
+import ProjectCard from "../components/projectCard";
+import myPic from "../assets/me/me.jpg";
 
 const introVariant_left = {
   initial: { opacity: 0, x: "-100vw" },
@@ -39,8 +42,7 @@ const scrollReveal_up = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0,
-      duration: 1,
+      duration: 7,
       ease: "linear",
       type: "spring",
       stiffness: 40,
@@ -97,23 +99,23 @@ function Home() {
               animate="animate"
               initial="initial"
             >
-              <a
-                href="#about"
-                className="about-btn cursor-pointer hover:lg:text-teal-600"
-              >
+              <a href="#about" className="about-btn  hover:lg:text-teal-600">
                 ABOUT
               </a>
-              <div className="proj-btn cursor-pointer hover:lg:text-teal-600">
+              <Link to="projects" className="proj-btn  hover:lg:text-teal-600">
                 PROJECTS
-              </div>
-              <div className="contact-btn cursor-pointer hover:lg:text-teal-600">
+              </Link>
+              <a
+                href="#contact"
+                className="contact-btn  hover:lg:text-teal-600"
+              >
                 CONTACT
-              </div>
+              </a>
             </motion.div>
           </div>
         </div>
         <div
-          className="content text-zinc-700 bg-gray-300 dark:bg-neutral-900 dark:text-gray-200 p-8 md:p-12 md:pr-28  w-screen"
+          className="content text-zinc-700 bg-gray-300 dark:bg-neutral-900 dark:text-gray-200 p-6 sm:p-8 md:p-12 md:pr-28  w-screen"
           id="about"
         >
           <motion.div
@@ -129,11 +131,7 @@ function Home() {
             </span>
             <div className="about-content flex text-center  sm:justify-center flex-wrap xl:flex-nowrap w-full sm:text-justify">
               <div className="img-container min-w-72 rounded-xl p-4 mb-4  dark:bg-slate-800 sm:w-3/5 xl:w-full xl:max-w-72 flex items-center">
-                <img
-                  src="../src/assets/me/me.jpg"
-                  alt="me"
-                  className="rounded-full"
-                />
+                <img src={myPic} alt="me" className="rounded-full" />
               </div>
               <div className="about-text px-4 lg:px-8 mb-4 sm:text-xl font-medium">
                 <span className="block">
@@ -176,26 +174,58 @@ function Home() {
             </span>
             <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
               {iconData.map((data, index) => (
-                <Icon key={index} icon_name={data.name} icon_path={data.path} />
+                <Icon key={index} icon_name={data.name} icon={data.path} />
               ))}
             </div>
           </motion.div>
-          <div
-            className="proficiency mt-8 lg:mt-10 sm:px-20 md:px-24 lg:px-48"
-            ref={ref3}
+          <motion.div
+            className="proficiency mt-8 lg:mt-10 sm:px-20 md:px-24 lg:px-52"
+            variants={scrollReveal_up}
+            initial="hidden"
+            animate={inView4 ? "visible" : "hidden"}
+            ref={ref4}
+            exit="hidden"
           >
-            <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
-              Proficiency
+            <div ref={ref3}>
+              <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
+                Proficiency
+              </span>
+              {iconData.map((data, index) => (
+                <ProgressBar
+                  key={index}
+                  inView3={inView3}
+                  name={data.name}
+                  progressLimit={data.proficiency}
+                />
+              ))}
+            </div>
+          </motion.div>
+          <motion.div
+            className="project md:p-6 mt-16 lg:mt-24 md:px-16 flex flex-col"
+            variants={scrollReveal_up}
+            initial="hidden"
+            animate={inView5 ? "visible" : "hidden"}
+            ref={ref5}
+            exit="hidden"
+          >
+            <span className="project-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
+              PROJECT HIGHLIGHT
             </span>
-            {iconData.map((data, index) => (
-              <ProgressBar
-                key={index}
-                inView3={inView3}
-                name={data.name}
-                progressLimit={data.proficiency}
-              />
-            ))}
-          </div>
+            <div className="project-container flex flex-wrap justify-center items-center gap-4 sm:gap-8 rounded-xl p-4 shadow shadow-gray-400 dark:shadow-none">
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+            </div>
+            <div className="flex justify-center mt-4 lg:mt-8">
+              <Link
+                to="projects"
+                className="font-unbounded text-white text-xs lg:text-sm p-2 rounded-lg bg-teal-800 dark:bg-teal-700  lg:hover:bg-teal-700 lg:hover:dark:bg-teal-600"
+              >
+                VIEW MORE PROJECTS
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </div>
     </>

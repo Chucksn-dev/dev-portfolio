@@ -2,7 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/home";
 import NoPage from "../pages/noPage";
-import Projects from "../pages/portfolioProjects";
+import Projects from "../pages/projects";
 import SharedLayout from "../pages/sharedLayout";
 
 function App() {

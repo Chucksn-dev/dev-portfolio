@@ -1,3 +1,9 @@
+import githubIconWhite from "../assets/github2.svg";
+import githubIconBlack from "../assets/github.svg";
+import twitterIcon from "../assets/twitter.svg";
+import tictokIcon from "../assets/tictok.svg";
+import linkedinIcon from "../assets/linkedin.svg";
+
 function Footer({ darkMode }) {
   let year = new Date().getFullYear();
   return (
@@ -5,11 +11,7 @@ function Footer({ darkMode }) {
       <div className="footer-links flex justify-center gap-x-8 lg:gap-x-12 hover:cursor-pointer mb-16 mt-2">
         <a href="https://github.com/chucksn" rel="noreferrer" target="_blank">
           <img
-            src={
-              darkMode
-                ? "../src/assets/github2.svg"
-                : "../src/assets/github.svg"
-            }
+            src={darkMode ? githubIconWhite : githubIconBlack}
             alt="github"
           />
         </a>
@@ -18,17 +20,17 @@ function Footer({ darkMode }) {
           rel="noreferrer"
           target="_blank"
         >
-          <img src="../src/assets/twitter.svg" alt="twitter" />
+          <img src={twitterIcon} alt="twitter" />
         </a>
         <a
           href="https://www.tiktok.com/@chuckx892?_t=8YbFb8cvrSI&_r=1"
           rel="noreferrer"
           target="_blank"
         >
-          <img src="../src/assets/tictok.svg" alt="tictok" />
+          <img src={tictokIcon} alt="tictok" />
         </a>
         <a href="#" rel="noreferrer" target="_blank">
-          <img src="../src/assets/linkedin.svg" alt="linkedin" />
+          <img src={linkedinIcon} alt="linkedin" />
         </a>
       </div>
       <div className="footer-text flex flex-col items-center  lg:mt-4">

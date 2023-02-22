@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import homeIcon from "..//assets/home.svg";
+import portfolioIcon from "..//assets/portfolio2.svg";
+import lightIcon from "..//assets/light-mode3.svg";
+import nightIcon from "..//assets/night-mode.svg";
 
 function NavBar({ darkMode, setDarkMode }) {
   const handleThemeToggle = () => {
@@ -30,31 +35,23 @@ function NavBar({ darkMode, setDarkMode }) {
       animate="animate"
       initial="initial"
     >
-      <img src="../src/assets/home.svg" alt="home" className="home  p-3" />
+      <Link to="/">
+        <img src={homeIcon} alt="home" className="home  p-3" />
+      </Link>
 
-      <img
-        src="../src/assets/portfolio2.svg"
-        alt="portfolio"
-        className="home  p-3"
-      />
+      <Link to="projects">
+        <img src={portfolioIcon} alt="portfolio" className="home  p-3" />
+      </Link>
 
       <div
         className="w-9 h-9  relative cursor-pointer"
         onClick={handleThemeToggle}
       >
         {darkMode && (
-          <img
-            src="../src/assets/light-mode3.svg"
-            alt="light"
-            className=" light absolute"
-          />
+          <img src={lightIcon} alt="light" className=" light absolute" />
         )}
         {!darkMode && (
-          <img
-            src="../src/assets/night-mode.svg"
-            alt="night"
-            className="night absolute"
-          />
+          <img src={nightIcon} alt="night" className="night absolute" />
         )}
       </div>
     </motion.div>
