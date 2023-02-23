@@ -7,6 +7,7 @@ import ProgressBar from "../components/progressBar";
 import { Link } from "react-router-dom";
 import ProjectCard from "../components/projectCard";
 import myPic from "../assets/me/me.jpg";
+import { projectData } from "../projectData";
 
 const introVariant_left = {
   initial: { opacity: 0, x: "-100vw" },
@@ -212,10 +213,9 @@ function Home() {
               PROJECT HIGHLIGHT
             </span>
             <div className="project-container flex flex-wrap justify-center items-center gap-4 sm:gap-8 rounded-xl p-4 shadow shadow-gray-400 dark:shadow-none">
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+              {projectData.slice(0, 4).map((data, index) => (
+                <ProjectCard key={index} project_Img={data.image} />
+              ))}
             </div>
             <div className="flex justify-center mt-4 lg:mt-8">
               <Link
