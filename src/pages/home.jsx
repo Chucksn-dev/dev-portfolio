@@ -43,25 +43,34 @@ const scrollReveal_up = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 7,
+      duration: 5,
       ease: "linear",
       type: "spring",
-      stiffness: 40,
+      stiffness: 140,
     },
   },
 };
 
 function Home() {
+  const [ref0, inView0] = useInView({ triggerOnce: false });
   const [ref1, inView1] = useInView({ triggerOnce: true });
   const [ref2, inView2] = useInView({ triggerOnce: true });
   const [ref3, inView3] = useInView({ triggerOnce: true });
   const [ref4, inView4] = useInView({ triggerOnce: true });
   const [ref5, inView5] = useInView({ triggerOnce: true });
+  const [ref6, inView6] = useInView({ triggerOnce: true });
+
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0, "smooth");
+  };
 
   return (
     <>
-      <div className="main w-screen min-h-screen  ">
-        <div className="hero-bg bg-[url('../src/assets/setup6.jpg')] bg-no-repeat lg:bg-fixed bg-center bg-cover w-full h-screen -z-20">
+      <div className="main w-screen min-h-screen" onLoad={handleScrollToTop}>
+        <div
+          className="hero-bg bg-[url('../src/assets/setup6.jpg')] bg-no-repeat lg:bg-fixed bg-center bg-cover w-full h-screen -z-20"
+          ref={ref0}
+        >
           <div className="hero-overlay w-full min-h-full bg-black/70 flex justify-start items-center px-8 md:px-10 lg:px-16 relative">
             <motion.div
               className="hero-content font-roboto font-medium "
@@ -212,9 +221,14 @@ function Home() {
             <span className="project-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
               PROJECT HIGHLIGHT
             </span>
-            <div className="project-container flex flex-wrap justify-center items-center gap-4 sm:gap-8 rounded-xl p-4 shadow shadow-gray-400 dark:shadow-none">
+            <div className="project-container flex flex-wrap justify-center items-center gap-5 sm:gap-8 rounded-xl p-4 shadow shadow-gray-400 dark:shadow-none">
               {projectData.slice(0, 4).map((data, index) => (
-                <ProjectCard key={index} project_Img={data.image} />
+                <ProjectCard
+                  key={index}
+                  project_Img={data.image}
+                  description={data.description}
+                  name={data.name}
+                />
               ))}
             </div>
             <div className="flex justify-center mt-4 lg:mt-8">
@@ -226,7 +240,107 @@ function Home() {
               </Link>
             </div>
           </motion.div>
+          <div id="contact">
+            <motion.div
+              variants={scrollReveal_up}
+              initial="hidden"
+              animate={inView6 ? "visible" : "hidden"}
+              ref={ref6}
+              exit="hidden"
+            >
+              <span className="project-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mt-12 md:mt-20 mb-4 md:mb-6">
+                CONTACT ME
+              </span>
+              <div className="contact-section w-full bg-[url('../src/assets/setup7.jpg')] bg-no-repeat lg:bg-fixed bg-center bg-cover mt-8">
+                <div className="overlay w-full h-full py-12 sm:py-20 md:py-24 dark:bg-black/70 bg-gray-900/50 flex flex-col justify-center">
+                  <div className="send-message-container p-4 md:p-8 bg-slate-300/95 dark:bg-neutral-900/90 w-4/5 mx-auto">
+                    <span className="block font-prosto font-medium text-lg md:text-xl text-center">
+                      Send me a message
+                    </span>
+                    <form action="">
+                      <label
+                        htmlFor="name"
+                        className="font-ubuntu text-sm sm:text-base font-medium block mb-1"
+                      >
+                        Name
+                      </label>{" "}
+                      <input
+                        type="text"
+                        name="name"
+                        className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 text-black outline-none"
+                        placeholder="Your Name"
+                      />
+                      <label
+                        htmlFor="email"
+                        className="font-ubuntu text-sm sm:text-base font-medium block mb-1"
+                      >
+                        Email
+                      </label>{" "}
+                      <input
+                        type="text"
+                        name="email"
+                        className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 text-black outline-none"
+                        placeholder="Your Email"
+                      />
+                      <label
+                        htmlFor="subject"
+                        className="font-ubuntu text-sm sm:text-base font-medium block mb-1"
+                      >
+                        Subject
+                      </label>{" "}
+                      <input
+                        type="text"
+                        name="subject"
+                        className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 text-black outline-none"
+                        placeholder="Subject"
+                      />
+                      <label
+                        htmlFor="message"
+                        className="font-ubuntu text-sm sm:text-base font-medium block mb-1"
+                      >
+                        Message
+                      </label>{" "}
+                      <textarea
+                        type="text"
+                        name="message"
+                        className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 h-52 text-black outline-none"
+                        placeholder="Message"
+                      />
+                      <div className="flex justify-center">
+                        <button
+                          type="submit"
+                          className="p-2 md:p-3 bg-sky-700 rounded-xl md md:mt-4 md:text-xl lg:hover:bg-sky-800 text-white"
+                        >
+                          Send message
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div className="get-in-touch-container p-4 md:p-8 bg-slate-300/95 dark:bg-neutral-900/90 w-4/5 mx-auto mt-8">
+                    <span className="block font-prosto font-medium text-lg md:text-xl text-center">
+                      Get in touch
+                    </span>
+                    <div className="location text-center font-ubuntu text-sm sm:text-base mt-4">
+                      <i className="fa-solid fa-location-dot text-red-500"></i>
+                      {"  "}
+                      <span className="inline-block">Houston, TX. USA</span>
+                    </div>
+                    <div className="email text-center font-ubuntu text-sm sm:text-base mt-2">
+                      <i className="fa-regular fa-envelope"></i>{" "}
+                      <span className="inline-block">chucksn611@gmail.com</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
+        {!inView0 && (
+          <i
+            className="fa-solid fa-circle-arrow-up text-sky-700 text-3xl fixed bottom-6 right-6 lg:hover:cursor-pointer animate-bounce"
+            onClick={handleScrollToTop}
+          ></i>
+        )}
       </div>
     </>
   );
