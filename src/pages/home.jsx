@@ -326,7 +326,7 @@ function Home() {
                       <span className="inline-block">Houston, TX. USA</span>
                     </div>
                     <div className="email text-center font-ubuntu text-sm sm:text-base mt-2">
-                      <i className="fa-regular fa-envelope"></i>{" "}
+                      <i className="fa-regular fa-envelope text-sky-600"></i>{" "}
                       <span className="inline-block">chucksn611@gmail.com</span>
                     </div>
                   </div>
