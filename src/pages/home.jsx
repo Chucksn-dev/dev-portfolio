@@ -221,7 +221,7 @@ function Home() {
             <span className="project-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
               PROJECT HIGHLIGHT
             </span>
-            <div className="project-container flex flex-wrap justify-center items-center gap-5 sm:gap-8 rounded-xl p-4 shadow shadow-gray-400 dark:shadow-none">
+            <div className="project-container flex flex-wrap justify-center items-center gap-8 rounded-xl p-4 shadow shadow-gray-400 dark:shadow-none">
               {projectData.slice(0, 4).map((data, index) => (
                 <ProjectCard
                   key={index}
@@ -234,7 +234,7 @@ function Home() {
             <div className="flex justify-center mt-4 lg:mt-8">
               <Link
                 to="projects"
-                className="font-unbounded text-white text-xs lg:text-sm p-2 rounded-lg bg-teal-800 dark:bg-teal-700  lg:hover:bg-teal-700 lg:hover:dark:bg-teal-600"
+                className="font-unbounded text-white text-xs lg:text-sm p-3 rounded-lg bg-teal-800 dark:bg-teal-700  lg:hover:bg-teal-700 lg:hover:dark:bg-teal-600"
               >
                 VIEW MORE PROJECTS
               </Link>
