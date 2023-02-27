@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import ProjectCard from "../components/projectCard";
 import myPic from "../assets/me/me.jpg";
 import { projectData } from "../projectData";
+import SendMessage from "../components/sendMessage";
+import GetInTouch from "../components/getInTouch";
 
 const introVariant_left = {
   initial: { opacity: 0, x: "-100vw" },
@@ -43,10 +45,10 @@ const scrollReveal_up = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 5,
-      ease: "linear",
+      duration: 4,
+      ease: "easeInOut",
       type: "spring",
-      stiffness: 140,
+      stiffness: 70,
     },
   },
 };
@@ -253,83 +255,8 @@ function Home() {
               </span>
               <div className="contact-section w-full bg-[url('../src/assets/setup7.jpg')] bg-no-repeat lg:bg-fixed bg-center bg-cover mt-8">
                 <div className="overlay w-full h-full py-12 sm:py-20 md:py-24 dark:bg-black/70 bg-gray-900/50 flex flex-col justify-center">
-                  <div className="send-message-container p-4 md:p-8 bg-slate-300/95 dark:bg-neutral-900/90 w-4/5 mx-auto">
-                    <span className="block font-prosto font-medium text-lg md:text-xl text-center">
-                      Send me a message
-                    </span>
-                    <form action="">
-                      <label
-                        htmlFor="name"
-                        className="font-ubuntu text-sm sm:text-base font-medium block mb-1"
-                      >
-                        Name
-                      </label>{" "}
-                      <input
-                        type="text"
-                        name="name"
-                        className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 text-black outline-none"
-                        placeholder="Your Name"
-                      />
-                      <label
-                        htmlFor="email"
-                        className="font-ubuntu text-sm sm:text-base font-medium block mb-1"
-                      >
-                        Email
-                      </label>{" "}
-                      <input
-                        type="text"
-                        name="email"
-                        className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 text-black outline-none"
-                        placeholder="Your Email"
-                      />
-                      <label
-                        htmlFor="subject"
-                        className="font-ubuntu text-sm sm:text-base font-medium block mb-1"
-                      >
-                        Subject
-                      </label>{" "}
-                      <input
-                        type="text"
-                        name="subject"
-                        className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 text-black outline-none"
-                        placeholder="Subject"
-                      />
-                      <label
-                        htmlFor="message"
-                        className="font-ubuntu text-sm sm:text-base font-medium block mb-1"
-                      >
-                        Message
-                      </label>{" "}
-                      <textarea
-                        type="text"
-                        name="message"
-                        className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 h-52 text-black outline-none"
-                        placeholder="Message"
-                      />
-                      <div className="flex justify-center">
-                        <button
-                          type="submit"
-                          className="p-2 md:p-3 bg-sky-700 rounded-xl md md:mt-4 md:text-xl lg:hover:bg-sky-800 text-white"
-                        >
-                          Send message
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                  <div className="get-in-touch-container p-4 md:p-8 bg-slate-300/95 dark:bg-neutral-900/90 w-4/5 mx-auto mt-8">
-                    <span className="block font-prosto font-medium text-lg md:text-xl text-center">
-                      Get in touch
-                    </span>
-                    <div className="location text-center font-ubuntu text-sm sm:text-base mt-4">
-                      <i className="fa-solid fa-location-dot text-red-500"></i>
-                      {"  "}
-                      <span className="inline-block">Houston, TX. USA</span>
-                    </div>
-                    <div className="email text-center font-ubuntu text-sm sm:text-base mt-2">
-                      <i className="fa-regular fa-envelope text-sky-600"></i>{" "}
-                      <span className="inline-block">chucksn611@gmail.com</span>
-                    </div>
-                  </div>
+                  <SendMessage />
+                  <GetInTouch />
                 </div>
               </div>
             </motion.div>
