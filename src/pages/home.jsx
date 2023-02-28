@@ -45,10 +45,10 @@ const scrollReveal_up = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 4,
+      duration: 5,
       ease: "easeInOut",
       type: "spring",
-      stiffness: 70,
+      stiffness: 50,
     },
   },
 };
@@ -227,6 +227,7 @@ function Home() {
               {projectData.slice(0, 4).map((data, index) => (
                 <ProjectCard
                   key={index}
+                  url={data.url}
                   project_Img={data.image}
                   description={data.description}
                   name={data.name}
