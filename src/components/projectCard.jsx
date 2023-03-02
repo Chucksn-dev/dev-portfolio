@@ -7,7 +7,7 @@ function ProjectCard({ project_Img, name, description, url }) {
     >
       <img src={project_Img} alt="proj_img" className=" mb-1" />
       <div className="text-center px-3">
-        <span className="name block text-xl md:text-2xl text-yellow-700 dark:text-yellow-300 font-ubuntu ">
+        <span className="name block text-xl  text-yellow-700 dark:text-yellow-300 font-ubuntu ">
           {name}
         </span>
         <span className="description block text-sm md:text-base font-sans font-medium text-slate-600 dark:text-zinc-400 ">

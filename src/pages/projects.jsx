@@ -1,5 +1,28 @@
 import ProjectCard from "../components/projectCard";
 import { projectData } from "../projectData";
+import { motion } from "framer-motion";
+
+const pageRouteVariant = {
+  initial: { x: "100vw" },
+  animate: {
+    x: 0,
+    transition: {
+      duration: 0.3,
+      ease: "linear",
+      type: "spring",
+      stiffness: 30,
+    },
+  },
+  exit: {
+    x: "-100vw",
+    transition: {
+      duration: 0.3,
+      ease: "linear",
+      type: "spring",
+      stiffness: 30,
+    },
+  },
+};
 
 function Projects() {
   const handleScrollToTop = () => {
@@ -13,7 +36,13 @@ function Projects() {
       <span className="project-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
         MY PROJECTS
       </span>
-      <div className="project-container flex flex-wrap justify-center items-center gap-8 rounded-xl p-4 shadow shadow-gray-400 dark:shadow-none">
+      <motion.div
+        className="project-container flex flex-wrap justify-center items-center gap-8 rounded-xl p-4 shadow shadow-gray-400 dark:shadow-none"
+        variants={pageRouteVariant}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
         {projectData.map((data, index) => (
           <ProjectCard
             key={index}
@@ -23,7 +52,7 @@ function Projects() {
             project_Img={data.image}
           />
         ))}
-      </div>
+      </motion.div>
       <a
         className="button-link flex justify-center mt-6"
         href="https://github.com/chucksn?tab=repositories"

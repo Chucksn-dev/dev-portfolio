@@ -29,7 +29,11 @@ function Footer({ darkMode }) {
         >
           <img src={tictokIcon} alt="tictok" />
         </a>
-        <a href="#" rel="noreferrer" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/chucksn611/"
+          rel="noreferrer"
+          target="_blank"
+        >
           <img src={linkedinIcon} alt="linkedin" />
         </a>
       </div>

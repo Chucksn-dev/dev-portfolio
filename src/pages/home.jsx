@@ -17,8 +17,8 @@ const introVariant_left = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 1,
-      duration: 5,
+      delay: 0.5,
+      duration: 3,
       ease: "linear",
       type: "spring",
       stiffness: 40,
@@ -33,7 +33,7 @@ const introVariant = {
 
     transition: {
       delay: 1,
-      duration: 7,
+      duration: 3,
       ease: "linear",
     },
   },
@@ -118,7 +118,7 @@ function Home() {
                 PROJECTS
               </Link>
               <a
-                href="#contact"
+                href="#contact-section"
                 className="contact-btn  hover:lg:text-teal-600"
               >
                 CONTACT
@@ -243,7 +243,7 @@ function Home() {
               </Link>
             </div>
           </motion.div>
-          <div id="contact">
+          <div id="contact-section">
             <motion.div
               variants={scrollReveal_up}
               initial="hidden"

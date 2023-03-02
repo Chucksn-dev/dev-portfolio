@@ -20,7 +20,7 @@ function NavBar({ darkMode, setDarkMode }) {
 
       transition: {
         delay: 1,
-        duration: 7,
+        duration: 2,
         ease: "linear",
       },
     },
