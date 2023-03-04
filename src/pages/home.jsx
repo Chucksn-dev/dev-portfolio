@@ -1,7 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useState } from "react";
+
 import Icon from "../components/icon";
 import { iconData } from "../iconData";
 import ProgressBar from "../components/progressBar";
@@ -62,13 +62,10 @@ function Home() {
   const [ref4, inView4] = useInView({ triggerOnce: true });
   const [ref5, inView5] = useInView({ triggerOnce: true });
   const [ref6, inView6] = useInView({ triggerOnce: true });
-  // const [scrollTop, setScrollTop] = useState(true);
 
   const handleScrollToTop = () => {
     window.scrollTo(0, 0, "smooth");
   };
-
-  const handleSamePgLink = () => {};
 
   return (
     <>
