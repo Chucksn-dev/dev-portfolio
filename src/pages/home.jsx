@@ -1,6 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 import Icon from "../components/icon";
 import { iconData } from "../iconData";
 import ProgressBar from "../components/progressBar";
@@ -18,7 +19,7 @@ const introVariant_left = {
     x: 0,
     transition: {
       delay: 0.5,
-      duration: 3,
+      duration: 2,
       ease: "linear",
       type: "spring",
       stiffness: 40,
@@ -33,7 +34,7 @@ const introVariant = {
 
     transition: {
       delay: 1,
-      duration: 3,
+      duration: 2,
       ease: "linear",
     },
   },
@@ -61,14 +62,17 @@ function Home() {
   const [ref4, inView4] = useInView({ triggerOnce: true });
   const [ref5, inView5] = useInView({ triggerOnce: true });
   const [ref6, inView6] = useInView({ triggerOnce: true });
+  // const [scrollTop, setScrollTop] = useState(true);
 
   const handleScrollToTop = () => {
     window.scrollTo(0, 0, "smooth");
   };
 
+  const handleSamePgLink = () => {};
+
   return (
     <>
-      <div className="main w-screen min-h-screen" onLoad={handleScrollToTop}>
+      <div className="main w-screen min-h-screen">
         <div
           className="hero-bg bg-[url('../src/assets/setup6.jpg')] bg-no-repeat lg:bg-fixed bg-center bg-cover w-full h-screen -z-20"
           ref={ref0}
@@ -136,7 +140,6 @@ function Home() {
             initial="hidden"
             animate={inView1 ? "visible" : "hidden"}
             ref={ref1}
-            exit="hidden"
           >
             <span className="block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6 ">
               ABOUT ME
@@ -147,15 +150,15 @@ function Home() {
               </div>
               <div className="about-text px-4 lg:px-8 mb-4 sm:text-xl font-medium">
                 <span className="block">
-                  Hi, my name is Chucks Nwosu and I'm a self-taught frontend
-                  developer with a focus on becoming a full-stack developer.
-                  With over 2 years of programming experience, I have a passion
-                  for creating high-quality, user-friendly and responsive, web
-                  and mobile applications . As a quick learner and
-                  problem-solver, I am constantly seeking new challenges to
-                  improve my skills and knowledge. My goal is to become a
-                  full-stack developer, which is why I'm constantly learning new
-                  technologies and honing my skills.
+                  Hi, my name is Chucks and I'm a front-end developer with a
+                  focus on becoming a full-stack developer. With over 2 years of
+                  programming experience, I have a passion for creating
+                  high-quality, user-friendly and responsive, web and mobile
+                  applications . As a quick learner and problem-solver, I am
+                  constantly seeking new challenges to improve my skills and
+                  knowledge. My goal is to become a full-stack developer, which
+                  is why I'm constantly learning new technologies and honing my
+                  skills.
                 </span>
                 <br />
                 <span>
@@ -176,13 +179,12 @@ function Home() {
             initial="hidden"
             animate={inView2 ? "visible" : "hidden"}
             ref={ref2}
-            exit="hidden"
           >
             <span className="header-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
               MY SKILLS
             </span>
             <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
-              Skills and Tools
+              Tech Stack
             </span>
             <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
               {iconData.map((data, index) => (
@@ -196,7 +198,6 @@ function Home() {
             initial="hidden"
             animate={inView4 ? "visible" : "hidden"}
             ref={ref4}
-            exit="hidden"
           >
             <div ref={ref3}>
               <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
@@ -218,7 +219,6 @@ function Home() {
             initial="hidden"
             animate={inView5 ? "visible" : "hidden"}
             ref={ref5}
-            exit="hidden"
           >
             <span className="project-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
               PROJECT HIGHLIGHT
@@ -249,7 +249,6 @@ function Home() {
               initial="hidden"
               animate={inView6 ? "visible" : "hidden"}
               ref={ref6}
-              exit="hidden"
             >
               <span className="project-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mt-12 md:mt-20 mb-4 md:mb-6">
                 CONTACT ME
