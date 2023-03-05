@@ -5,6 +5,10 @@ function SendMessage() {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
   const formRef = useRef();
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const subjectRef = useRef();
+  const messageRef = useRef();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,6 +32,15 @@ function SendMessage() {
       );
   };
 
+  const handleClosePrompt = () => {
+    setSuccess(false);
+    setError(null);
+    nameRef.current.value = "";
+    emailRef.current.value = "";
+    subjectRef.current.value = "";
+    messageRef.current.value = "";
+  };
+
   return (
     <div className="send-message-container p-4 md:p-8 bg-slate-300/95 dark:bg-neutral-900/90 w-4/5 mx-auto">
       <span className="block font-prosto font-medium text-lg md:text-xl text-center">
@@ -35,16 +48,22 @@ function SendMessage() {
       </span>
       <form ref={formRef} onSubmit={handleSubmit}>
         {error && (
-          <div className=" text-red-500 dark:text-yellow-500 text-lg text-center">
+          <span className="block text-red-500 dark:text-yellow-500 text-lg lg:text-xl text-center">
             Error: {error}{" "}
-            <i className=" close bg-white/60 fa-solid fa-circle-xmark"></i>
-          </div>
+            <i
+              className=" close text-black/60 dark:text-white/60 fa-solid fa-circle-xmark cursor-pointer"
+              onClick={handleClosePrompt}
+            ></i>
+          </span>
         )}
         {success && (
-          <div className="text-red-500 dark:text-yellow-500 text-lg text-center">
+          <span className="block text-red-500 dark:text-yellow-500 text-lg lg:text-xl text-center">
             Message sent successfully{" "}
-            <i className=" close bg-white/60 fa-solid fa-circle-xmark"></i>
-          </div>
+            <i
+              className=" close text-black/60 dark:text-white/60 fa-solid fa-circle-xmark cursor-pointer"
+              onClick={handleClosePrompt}
+            ></i>
+          </span>
         )}
         <label
           htmlFor="name"
@@ -53,6 +72,7 @@ function SendMessage() {
           Name
         </label>{" "}
         <input
+          ref={nameRef}
           type="text"
           name="user_name"
           className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 text-black outline-none"
@@ -65,6 +85,7 @@ function SendMessage() {
           Email
         </label>{" "}
         <input
+          ref={emailRef}
           type="text"
           name="user_email"
           className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 text-black outline-none"
@@ -77,6 +98,7 @@ function SendMessage() {
           Subject
         </label>{" "}
         <input
+          ref={subjectRef}
           type="text"
           name="subject"
           className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 text-black outline-none"
@@ -89,6 +111,7 @@ function SendMessage() {
           Message
         </label>{" "}
         <textarea
+          ref={messageRef}
           type="text"
           name="message"
           className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 h-52 text-black outline-none"
