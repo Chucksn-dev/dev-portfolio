@@ -36,12 +36,14 @@ function SendMessage() {
       <form ref={formRef} onSubmit={handleSubmit}>
         {error && (
           <div className=" text-red-500 dark:text-yellow-500 text-lg text-center">
-            Error: {error}
+            Error: {error}{" "}
+            <i className=" close bg-white/60 fa-solid fa-circle-xmark"></i>
           </div>
         )}
         {success && (
           <div className="text-red-500 dark:text-yellow-500 text-lg text-center">
-            Message sent successfully
+            Message sent successfully{" "}
+            <i className=" close bg-white/60 fa-solid fa-circle-xmark"></i>
           </div>
         )}
         <label
