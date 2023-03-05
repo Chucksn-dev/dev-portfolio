@@ -7,7 +7,7 @@ import tailwindIcon from "../src/assets/icons/tailwind.svg";
 import reduxIcon from "../src/assets/icons/redux.svg";
 import githubIcon from "../src/assets/icons/github3.svg";
 import vscodeIcon from "../src/assets/icons/vscode.svg";
-import nextJsIcon from "../src/assets/icons/nextJs2.svg";
+import nextJsIcon from "../src/assets/icons/next.svg";
 import pythonIcon from "../src/assets/icons/python.svg";
 import reduxToolkitIcon from "../src/assets/icons/redux-toolkit.svg";
 import postmanIcon from "../src/assets/icons/postman.svg";

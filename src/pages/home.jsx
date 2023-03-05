@@ -33,7 +33,7 @@ const introVariant = {
     opacity: 1,
 
     transition: {
-      delay: 1,
+      delay: 0.5,
       duration: 2,
       ease: "linear",
     },
@@ -49,7 +49,7 @@ const scrollReveal_up = {
       duration: 5,
       ease: "easeInOut",
       type: "spring",
-      stiffness: 50,
+      stiffness: 30,
     },
   },
 };
