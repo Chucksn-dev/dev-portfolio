@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import ProjectCard from "../components/projectCard";
 import { projectData } from "../projectData";
 import { motion } from "framer-motion";
@@ -25,14 +27,18 @@ const pageRouteVariant = {
 };
 
 function Projects() {
+  const location = useLocation();
+
   const handleScrollToTop = () => {
     window.scrollTo(0, 0, "smooth");
   };
+
+  useEffect(() => {
+    handleScrollToTop();
+  }, [location.pathname]);
+
   return (
-    <div
-      className="project min-h-screen text-zinc-700 bg-gray-300 dark:bg-neutral-900 dark:text-gray-200 p-6 sm:p-8 md:p-12 md:pr-28  w-screen"
-      onLoad={handleScrollToTop}
-    >
+    <div className="project min-h-screen text-zinc-700 bg-gray-300 dark:bg-neutral-900 dark:text-gray-200 p-6 sm:p-8 md:p-12 md:pr-28  w-screen">
       <span className="project-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
         MY PROJECTS
       </span>

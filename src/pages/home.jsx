@@ -1,7 +1,8 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Icon from "../components/icon";
 import { iconData } from "../iconData";
 import ProgressBar from "../components/progressBar";
@@ -63,9 +64,15 @@ function Home() {
   const [ref5, inView5] = useInView({ triggerOnce: true });
   const [ref6, inView6] = useInView({ triggerOnce: true });
 
+  const location = useLocation();
+
   const handleScrollToTop = () => {
     window.scrollTo(0, 0, "smooth");
   };
+
+  useEffect(() => {
+    handleScrollToTop();
+  }, [location.pathname]);
 
   return (
     <>
