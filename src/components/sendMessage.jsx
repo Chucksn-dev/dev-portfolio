@@ -35,13 +35,13 @@ function SendMessage() {
       </span>
       <form ref={formRef} onSubmit={handleSubmit}>
         {error && (
-          <div className=" text-yellow-500 text-lg text-center">
+          <div className=" text-red-500 dark:text-yellow-500 text-lg text-center">
             Error: {error}
           </div>
         )}
         {success && (
-          <div className=" text-yellow-500 text-lg text-center">
-            Email sent successfully
+          <div className="text-red-500 dark:text-yellow-500 text-lg text-center">
+            Message sent successfully
           </div>
         )}
         <label
