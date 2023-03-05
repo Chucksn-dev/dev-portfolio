@@ -34,8 +34,16 @@ function SendMessage() {
         Send me a message
       </span>
       <form ref={formRef} onSubmit={handleSubmit}>
-        {error && <div>Error: {error}</div>}
-        {success && <div>Email sent successfully</div>}
+        {error && (
+          <div className=" text-yellow-500 text-lg text-center">
+            Error: {error}
+          </div>
+        )}
+        {success && (
+          <div className=" text-yellow-500 text-lg text-center">
+            Email sent successfully
+          </div>
+        )}
         <label
           htmlFor="name"
           className="font-ubuntu text-sm sm:text-base font-medium block mb-1"
