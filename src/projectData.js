@@ -22,7 +22,7 @@ export const projectData = [
   },
   {
     name: "My Personal Portfolio",
-    url: "#",
+    url: "https://chucksn-portfolio.vercel.app/",
     image: portfolioImg,
     description:
       "Personal portfolio website. Includes projects and contact info",
