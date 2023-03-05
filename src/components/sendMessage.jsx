@@ -1,10 +1,41 @@
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+
 function SendMessage() {
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
+  const formRef = useRef();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    emailjs
+      .sendForm(
+        "service_qo3bdnv",
+        "template_dpc3v7s",
+        formRef.current,
+        "b2jp1ozQMwK-YXvNu"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSuccess(true);
+          setError(null);
+        },
+        (error) => {
+          console.log(error.text);
+          setError(error.text);
+        }
+      );
+  };
+
   return (
     <div className="send-message-container p-4 md:p-8 bg-slate-300/95 dark:bg-neutral-900/90 w-4/5 mx-auto">
       <span className="block font-prosto font-medium text-lg md:text-xl text-center">
         Send me a message
       </span>
-      <form action="">
+      <form ref={formRef} onSubmit={handleSubmit}>
+        {error && <div>Error: {error}</div>}
+        {success && <div>Email sent successfully</div>}
         <label
           htmlFor="name"
           className="font-ubuntu text-sm sm:text-base font-medium block mb-1"
@@ -13,7 +44,7 @@ function SendMessage() {
         </label>{" "}
         <input
           type="text"
-          name="name"
+          name="user_name"
           className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 text-black outline-none"
           placeholder="Your Name"
         />
@@ -25,7 +56,7 @@ function SendMessage() {
         </label>{" "}
         <input
           type="text"
-          name="email"
+          name="user_email"
           className="w-full p-2 rounded-lg bg-slate-200 dark:bg-slate-300 mb-4 text-black outline-none"
           placeholder="Your Email"
         />
