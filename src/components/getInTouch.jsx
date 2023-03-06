@@ -17,7 +17,7 @@ function GetInTouch() {
       </div>
       <div className=" text-center font-ubuntu text-sm sm:text-base mt-2">
         <span className="block">Also reach me through the links below</span>{" "}
-        <i className="text-2xl text-yellow-800 dark:text-yellow-500 fa-regular fa-hand-point-down"></i>
+        <i className="animate-bounce text-2xl text-yellow-800 dark:text-yellow-500 fa-regular fa-hand-point-down"></i>
       </div>
     </div>
   );
