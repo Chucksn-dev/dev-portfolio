@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import homeIcon from "..//assets/home.svg";
-import portfolioIcon from "..//assets/portfolio2.svg";
-import lightIcon from "..//assets/light-mode3.svg";
-import nightIcon from "..//assets/night-mode.svg";
+import homeIcon from "../assets/home.svg";
+import portfolioIcon from "../assets/portfolio2.svg";
+import lightIcon from "../assets/light-mode3.svg";
+import nightIcon from "../assets/night-mode.svg";
 
 function NavBar({ darkMode, setDarkMode }) {
   const handleThemeToggle = () => {

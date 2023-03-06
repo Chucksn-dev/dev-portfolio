@@ -1,5 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../redux/hamburgerMenuStatusSlice";
+import hamburgerIconDarkMode from "../assets/menu-hamburger2.svg";
+import hamburgerIconLightMode from "../assets/menu-hamburger.svg";
+import closeIconDarkMode from "../assets/close2.svg";
+import closeIconLightMode from "../assets/close.svg";
 
 function HamburgerMenu({ darkMode }) {
   const dispatch = useDispatch();
@@ -15,19 +19,13 @@ function HamburgerMenu({ darkMode }) {
     >
       {!menuIsOPen && (
         <img
-          src={
-            darkMode
-              ? "../src/assets/menu-hamburger2.svg"
-              : "../src/assets/menu-hamburger.svg"
-          }
+          src={darkMode ? hamburgerIconDarkMode : hamburgerIconLightMode}
           alt="menu"
         />
       )}
       {menuIsOPen && (
         <img
-          src={
-            darkMode ? "../src/assets/close2.svg" : "../src/assets/close.svg"
-          }
+          src={darkMode ? closeIconDarkMode : closeIconLightMode}
           alt="close"
         />
       )}
