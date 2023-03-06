@@ -15,8 +15,10 @@ function GetInTouch() {
           chucksn611@gmail.com
         </a>
       </div>
-      <div className=" text-center font-ubuntu text-sm sm:text-base mt-2">
-        <span className="block">Also reach me through the links below</span>{" "}
+      <div className=" text-center font-ubuntu text-sm sm:text-base mt-2 ">
+        <span className="block mb-2">
+          Also reach me through the links below
+        </span>{" "}
         <i className="animate-bounce text-2xl text-yellow-800 dark:text-yellow-500 fa-regular fa-hand-point-down"></i>
       </div>
     </div>
