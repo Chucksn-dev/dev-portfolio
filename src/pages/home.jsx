@@ -154,15 +154,15 @@ function Home() {
               </div>
               <div className="about-text px-4 lg:px-8 mb-4 sm:text-xl font-medium">
                 <span className="block">
-                  Hi, my name is Chucks and I'm a front-end developer with a
-                  focus on becoming a full-stack developer. With over 2 years of
-                  programming experience, I have a passion for creating
-                  high-quality, user-friendly and responsive, web and mobile
-                  applications . As a quick learner and problem-solver, I am
-                  constantly seeking new challenges to improve my skills and
-                  knowledge. My goal is to become a full-stack developer, which
-                  is why I'm constantly learning new technologies and honing my
-                  skills.
+                  Hi, my name is Chucks and I'm a frontend developer. I'm
+                  currently working towards becoming a full-stack developer.
+                  With over 2 years of programming experience, I have a passion
+                  for creating high-quality, user-friendly and responsive, web
+                  and mobile applications . As a quick learner and
+                  problem-solver, I am constantly seeking new challenges to
+                  improve my skills and knowledge. My goal is to become a
+                  full-stack developer, which is why I'm constantly learning new
+                  technologies and honing my skills.
                 </span>
                 <br />
                 <span>
