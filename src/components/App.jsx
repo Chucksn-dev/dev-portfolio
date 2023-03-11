@@ -4,6 +4,10 @@ import NoPage from "../pages/noPage";
 import Projects from "../pages/projects";
 import SharedLayout from "../pages/sharedLayout";
 import { AnimatePresence } from "framer-motion";
+import ReactGA from "react-ga";
+
+const TRACKING_ID = "UA-260357159-1";
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
   return (
