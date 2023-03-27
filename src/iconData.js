@@ -13,6 +13,7 @@ import reduxToolkitIcon from "../src/assets/icons/redux-toolkit.svg";
 import postmanIcon from "../src/assets/icons/postman.svg";
 import viteIcon from "../src/assets/icons/vite.svg";
 import nodeJsIcon from "../src/assets/icons/nodejs.svg";
+import apiIcon from "../src/assets/icons/api.svg";
 
 export const iconData = [
   { name: "HTML", path: htmlIcon, proficiency: 90 },
@@ -30,4 +31,5 @@ export const iconData = [
   { name: "Postman", path: postmanIcon, proficiency: 60 },
   { name: "Vite", path: viteIcon, proficiency: 80 },
   { name: "nodeJs", path: nodeJsIcon, proficiency: 50 },
+  { name: "API", path: apiIcon, proficiency: 65 },
 ];
