@@ -16,7 +16,7 @@ export const projectData = [
   },
   {
     name: "Movie Streaming App",
-    url: "https://movie-app-chucksn.vercel.app/",
+    url: "https://movie-app-chi-nine.vercel.app/",
     image: movieAppProjImg,
     description:
       "Movie streaming app, developed with React and Redux. 100% functional",
