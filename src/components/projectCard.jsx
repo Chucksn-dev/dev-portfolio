@@ -3,7 +3,7 @@ function ProjectCard({ project_Img, name, description, url }) {
     <a
       href={url}
       target="_blank"
-      className="project-card w-96 h-64 sm:h-72 md:h-80 dark:bg-black bg-zinc-900 flex flex-col justify-between rounded-b-xl p-1 sm:p-2"
+      className="project-card w-96 h-64 sm:h-72 md:h-80 dark:bg-black bg-zinc-900 flex flex-col justify-between rounded-b-xl p-1 "
     >
       <img src={project_Img} alt="proj_img" className=" mb-1" />
       <div className="text-center px-3">
