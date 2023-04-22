@@ -100,11 +100,15 @@ function Home() {
                   2500,
                   "Software Developer",
                   1500,
-                  "Front-end Developer",
+                  "Full-Stack Developer",
+                  1500,
+                  "Front-End Developer",
+                  1500,
+                  "Back-End Developer",
+                  1500,
+                  "MERN-Stack Developer",
                   1500,
                   "Web Developer",
-                  1500,
-                  "Web Designer",
                 ]}
                 wrapper="span"
                 repeat={Infinity}
@@ -134,11 +138,11 @@ function Home() {
           </div>
         </div>
         <div
-          className="content text-zinc-700 bg-gray-300 dark:bg-neutral-900 dark:text-gray-200 p-6 sm:p-8 md:p-12 md:pr-28  w-screen"
+          className="content text-zinc-700 bg-gray-200 dark:bg-neutral-900 dark:text-gray-200 p-6 sm:p-8 md:p-12 md:pr-28  w-screen"
           id="about"
         >
           <motion.div
-            className="about-section text-lg font-sans dark:bg-zinc-700 p-6 rounded-xl shadow shadow-gray-400 dark:shadow-none"
+            className="about-section text-lg font-sans dark:bg-white/5 p-6 rounded-xl bg-black/5 dark:bg-none shadow shadow-gray-400 dark:shadow-none"
             variants={scrollReveal_up}
             initial="hidden"
             animate={inView1 ? "visible" : "hidden"}
@@ -147,7 +151,7 @@ function Home() {
             <About />
           </motion.div>
           <motion.div
-            className="skills p-6 mt-16 lg:mt-24 md:px-16 lg:px-40 rounded-xl shadow shadow-gray-400 dark:shadow-none"
+            className="skills p-6 mt-16 lg:mt-24 md:px-16 lg:px-40 bg-black/5  dark:bg-white/5 rounded-xl shadow shadow-gray-400 dark:shadow-none"
             variants={scrollReveal_up}
             initial="hidden"
             animate={inView2 ? "visible" : "hidden"}
@@ -207,10 +211,44 @@ function Home() {
                 })}
               </div>
             </div>
+            <div className="backend my-4 md:my-8">
+              <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
+                Backend
+              </span>
+              <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
+                {iconData.map((data, index) => {
+                  if (data.type === "backend")
+                    return (
+                      <Icon
+                        key={index}
+                        icon_name={data.name}
+                        icon={data.path}
+                      />
+                    );
+                })}
+              </div>
+            </div>
+            <div className="database my-4 md:my-8">
+              <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
+                Database
+              </span>
+              <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
+                {iconData.map((data, index) => {
+                  if (data.type === "database")
+                    return (
+                      <Icon
+                        key={index}
+                        icon_name={data.name}
+                        icon={data.path}
+                      />
+                    );
+                })}
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
-            className="project md:p-6 mt-16 lg:mt-24 md:px-16 flex flex-col"
+            className="project md:p-6 mt-16 lg:mt-24 md:px-16 flex flex-col bg-black/5 dark:bg-white/5 rounded-xl shadow shadow-gray-400 dark:shadow-none"
             variants={scrollReveal_up}
             initial="hidden"
             animate={inView5 ? "visible" : "hidden"}
@@ -219,7 +257,7 @@ function Home() {
             <span className="project-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
               PROJECT HIGHLIGHT
             </span>
-            <div className="project-container flex flex-wrap justify-center items-center gap-8 rounded-xl p-4 shadow shadow-gray-400 dark:shadow-none">
+            <div className="project-container flex flex-wrap justify-center items-center gap-8  p-4 ">
               {projectData.slice(0, 4).map((data, index) => (
                 <ProjectCard
                   key={index}

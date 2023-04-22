@@ -16,10 +16,11 @@ import apiIcon from "../src/assets/icons/api.svg";
 import mongodbIcon from "../src/assets/icons/mongodb.svg";
 import expressIcon from "../src/assets/icons/express.svg";
 import sqlIcon from "../src/assets/icons/sql.svg";
+import mongooseIcon from "../src/assets/icons/mongoose.svg";
 
 export const iconData = [
   { name: "HTML", path: htmlIcon, proficiency: 90, type: "language" },
-  { name: "CSS", path: cssIcon, proficiency: 80, type: "others" },
+  { name: "CSS", path: cssIcon, proficiency: 80, type: "language" },
   {
     name: "JavaScript",
     path: javascriptIcon,
@@ -36,9 +37,10 @@ export const iconData = [
   { name: "Python", path: pythonIcon, proficiency: 70, type: "language" },
   { name: "Postman", path: postmanIcon, proficiency: 60, type: "others" },
   { name: "Vite", path: viteIcon, proficiency: 80, type: "others" },
-  { name: "Node.js", path: nodeJsIcon, proficiency: 70, type: "others" },
-  { name: "API", path: apiIcon, proficiency: 65, type: "others" },
+  { name: "Node.js", path: nodeJsIcon, proficiency: 70, type: "backend" },
+  { name: "API", path: apiIcon, proficiency: 65, type: "backend" },
   { name: "MongoDB", path: mongodbIcon, proficiency: 65, type: "database" },
   { name: "Express.js", path: expressIcon, proficiency: 65, type: "framework" },
   { name: "SQL", path: sqlIcon, proficiency: 65, type: "database" },
+  { name: "Mongoose", path: mongooseIcon, proficiency: 65, type: "backend" },
 ];
