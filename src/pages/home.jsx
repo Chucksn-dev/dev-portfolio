@@ -5,13 +5,12 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Icon from "../components/icon";
 import { iconData } from "../iconData";
-import ProgressBar from "../components/progressBar";
 import { Link } from "react-router-dom";
 import ProjectCard from "../components/projectCard";
-import myPic from "../assets/me/me.jpg";
 import { projectData } from "../projectData";
 import SendMessage from "../components/sendMessage";
 import GetInTouch from "../components/getInTouch";
+import About from "../components/about";
 
 const introVariant_left = {
   initial: { opacity: 0, x: "-100vw" },
@@ -145,77 +144,71 @@ function Home() {
             animate={inView1 ? "visible" : "hidden"}
             ref={ref1}
           >
-            <span className="block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6 ">
-              ABOUT ME
-            </span>
-            <div className="about-content flex text-center  sm:justify-center flex-wrap xl:flex-nowrap w-full sm:text-justify">
-              <div className="img-container min-w-72 rounded-xl p-4 mb-4  dark:bg-slate-800 sm:w-3/5 xl:w-full xl:max-w-72 flex items-center">
-                <img src={myPic} alt="me" className="rounded-full" />
-              </div>
-              <div className="about-text px-4 lg:px-8 mb-4 sm:text-xl font-medium">
-                <span className="block">
-                  Hi, my name is Chucks and I'm a frontend developer with over 2
-                  years of programming experience. I have a passion for creating
-                  high-quality, user-friendly and responsive, web and mobile
-                  applications . As a quick learner and problem-solver, I am
-                  constantly seeking new challenges to improve my skills and
-                  knowledge. My goal is to become a full-stack developer, which
-                  is why I'm constantly learning new technologies and honing my
-                  skills.
-                </span>
-                <br />
-                <span>
-                  I believe that great application development is all about
-                  striking a balance between functionality, usability, and
-                  aesthetics. That's why I strive to create applications that
-                  are not only easy to use and navigate but also visually
-                  appealing. My projects are built with attention to detail,
-                  ensuring that they're accessible and user-friendly across all
-                  devices and platforms.
-                </span>
-              </div>
-            </div>
+            <About />
           </motion.div>
           <motion.div
-            className="skills p-6 mt-16 lg:mt-24 md:px-16 lg:px-40"
+            className="skills p-6 mt-16 lg:mt-24 md:px-16 lg:px-40 rounded-xl shadow shadow-gray-400 dark:shadow-none"
             variants={scrollReveal_up}
             initial="hidden"
             animate={inView2 ? "visible" : "hidden"}
             ref={ref2}
           >
             <span className="header-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
-              MY SKILLS
+              TECHNOLOGY STACK
             </span>
-            <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
-              Tech Stack
-            </span>
-            <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
-              {iconData.map((data, index) => (
-                <Icon key={index} icon_name={data.name} icon={data.path} />
-              ))}
-            </div>
-          </motion.div>
-          <motion.div
-            className="proficiency mt-8 lg:mt-10 sm:px-20 md:px-24 lg:px-52"
-            variants={scrollReveal_up}
-            initial="hidden"
-            animate={inView4 ? "visible" : "hidden"}
-            ref={ref4}
-          >
-            <div ref={ref3}>
+            <div className="languages my-4 md:my-8">
               <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
-                Proficiency
+                Languages
               </span>
-              {iconData.map((data, index) => (
-                <ProgressBar
-                  key={index}
-                  inView3={inView3}
-                  name={data.name}
-                  progressLimit={data.proficiency}
-                />
-              ))}
+              <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
+                {iconData.map((data, index) => {
+                  if (data.type === "language")
+                    return (
+                      <Icon
+                        key={index}
+                        icon_name={data.name}
+                        icon={data.path}
+                      />
+                    );
+                })}
+              </div>
+            </div>
+            <div className="frameworks my-4 md:my-8">
+              <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
+                Frameworks
+              </span>
+              <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
+                {iconData.map((data, index) => {
+                  if (data.type === "framework")
+                    return (
+                      <Icon
+                        key={index}
+                        icon_name={data.name}
+                        icon={data.path}
+                      />
+                    );
+                })}
+              </div>
+            </div>
+            <div className="tools my-4 md:my-8">
+              <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
+                Dev Tools
+              </span>
+              <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
+                {iconData.map((data, index) => {
+                  if (data.type === "others")
+                    return (
+                      <Icon
+                        key={index}
+                        icon_name={data.name}
+                        icon={data.path}
+                      />
+                    );
+                })}
+              </div>
             </div>
           </motion.div>
+
           <motion.div
             className="project md:p-6 mt-16 lg:mt-24 md:px-16 flex flex-col"
             variants={scrollReveal_up}

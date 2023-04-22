@@ -3,14 +3,14 @@ function ProjectCard({ project_Img, name, description, url }) {
     <a
       href={url}
       target="_blank"
-      className="project-card w-96 h-64 sm:h-72 md:h-80 dark:bg-slate-800 bg-slate-400 flex flex-col justify-between rounded-b-xl p-1"
+      className="project-card w-96 h-64 sm:h-72 md:h-80 dark:bg-black bg-zinc-900 flex flex-col justify-between rounded-b-xl p-1 sm:p-2"
     >
       <img src={project_Img} alt="proj_img" className=" mb-1" />
       <div className="text-center px-3">
-        <span className="name block text-xl  text-yellow-700 dark:text-yellow-300 font-ubuntu ">
+        <span className="name block text-lg sm:text-xl  text-yellow-600 dark:text-yellow-300 font-ubuntu ">
           {name}
         </span>
-        <span className="description block text-sm md:text-base font-sans font-medium text-slate-600 dark:text-zinc-400 ">
+        <span className="description block text-sm md:text-base font-sans font-medium text-slate-400 dark:text-zinc-400 ">
           {description}
         </span>
       </div>

@@ -9,27 +9,36 @@ import githubIcon from "../src/assets/icons/github3.svg";
 import vscodeIcon from "../src/assets/icons/vscode.svg";
 import nextJsIcon from "../src/assets/icons/next.svg";
 import pythonIcon from "../src/assets/icons/python.svg";
-import reduxToolkitIcon from "../src/assets/icons/redux-toolkit.svg";
 import postmanIcon from "../src/assets/icons/postman.svg";
 import viteIcon from "../src/assets/icons/vite.svg";
 import nodeJsIcon from "../src/assets/icons/nodejs.svg";
 import apiIcon from "../src/assets/icons/api.svg";
+import mongodbIcon from "../src/assets/icons/mongodb.svg";
+import expressIcon from "../src/assets/icons/express.svg";
+import sqlIcon from "../src/assets/icons/sql.svg";
 
 export const iconData = [
-  { name: "HTML", path: htmlIcon, proficiency: 90 },
-  { name: "CSS", path: cssIcon, proficiency: 80 },
-  { name: "JavaScript", path: javascriptIcon, proficiency: 75 },
-  { name: "ReactJs", path: reactIcon, proficiency: 85 },
-  { name: "Git", path: gitIcon, proficiency: 65 },
-  { name: "Tailwind", path: tailwindIcon, proficiency: 75 },
-  { name: "Redux", path: reduxIcon, proficiency: 75 },
-  { name: "GitHub", path: githubIcon, proficiency: 65 },
-  { name: "VScode", path: vscodeIcon, proficiency: 85 },
-  { name: "NextJs", path: nextJsIcon, proficiency: 50 },
-  { name: "Python", path: pythonIcon, proficiency: 70 },
-  { name: "Redux Toolkit", path: reduxToolkitIcon, proficiency: 70 },
-  { name: "Postman", path: postmanIcon, proficiency: 60 },
-  { name: "Vite", path: viteIcon, proficiency: 80 },
-  { name: "nodeJs", path: nodeJsIcon, proficiency: 50 },
-  { name: "API", path: apiIcon, proficiency: 65 },
+  { name: "HTML", path: htmlIcon, proficiency: 90, type: "language" },
+  { name: "CSS", path: cssIcon, proficiency: 80, type: "others" },
+  {
+    name: "JavaScript",
+    path: javascriptIcon,
+    proficiency: 75,
+    type: "language",
+  },
+  { name: "React.js", path: reactIcon, proficiency: 85, type: "framework" },
+  { name: "Git", path: gitIcon, proficiency: 65, type: "others" },
+  { name: "Tailwind", path: tailwindIcon, proficiency: 75, type: "framework" },
+  { name: "Redux", path: reduxIcon, proficiency: 75, type: "others" },
+  { name: "GitHub", path: githubIcon, proficiency: 65, type: "others" },
+  { name: "VScode", path: vscodeIcon, proficiency: 85, type: "others" },
+  { name: "Next.js", path: nextJsIcon, proficiency: 50, type: "framework" },
+  { name: "Python", path: pythonIcon, proficiency: 70, type: "language" },
+  { name: "Postman", path: postmanIcon, proficiency: 60, type: "others" },
+  { name: "Vite", path: viteIcon, proficiency: 80, type: "others" },
+  { name: "Node.js", path: nodeJsIcon, proficiency: 70, type: "others" },
+  { name: "API", path: apiIcon, proficiency: 65, type: "others" },
+  { name: "MongoDB", path: mongodbIcon, proficiency: 65, type: "database" },
+  { name: "Express.js", path: expressIcon, proficiency: 65, type: "framework" },
+  { name: "SQL", path: sqlIcon, proficiency: 65, type: "database" },
 ];
