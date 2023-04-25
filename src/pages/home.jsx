@@ -257,7 +257,7 @@ function Home() {
             <span className="project-txt block text-center text-2xl md:text-3xl font-ubuntu font-semibold text-teal-700 dark:text-teal-500 mb-4 md:mb-6">
               PROJECT HIGHLIGHT
             </span>
-            <div className="project-container flex flex-wrap justify-center items-center gap-8  p-4 ">
+            <div className="project-container flex flex-wrap justify-center gap-8  p-4 ">
               {projectData.slice(0, 4).map((data, index) => (
                 <ProjectCard
                   key={index}
@@ -265,6 +265,7 @@ function Home() {
                   project_Img={data.image}
                   description={data.description}
                   name={data.name}
+                  tech={data.tech}
                 />
               ))}
             </div>

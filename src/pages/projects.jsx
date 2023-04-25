@@ -43,7 +43,7 @@ function Projects() {
         MY PROJECTS
       </span>
       <motion.div
-        className="project-container flex flex-wrap justify-center items-center gap-8 rounded-xl p-4 shadow shadow-gray-400 dark:shadow-none"
+        className="project-container flex flex-wrap justify-center gap-8 rounded-xl p-4 shadow shadow-gray-400 dark:shadow-none"
         variants={pageRouteVariant}
         initial="initial"
         animate="animate"
@@ -56,6 +56,7 @@ function Projects() {
             description={data.description}
             name={data.name}
             project_Img={data.image}
+            tech={data.tech}
           />
         ))}
       </motion.div>
