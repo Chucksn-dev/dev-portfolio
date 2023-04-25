@@ -21,7 +21,7 @@ export const projectData = [
     image: movieAppProjImg,
     tech: "JavaScript, React.js, Redux,chakra-ui, Framer-motion, Swiper.js, REST-API.",
     description:
-      "Movie streaming web application that can access a huge library of movies from different genres. This app can also browse movies by categories, search for specific titles, and create personalized watchlists.",
+      "Movie streaming web application that can access a huge library of movies from different genres. Users can also browse movies by categories, search for specific titles, and create personalized watchlists.",
   },
   {
     name: "Trivia Titan",
