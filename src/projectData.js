@@ -36,9 +36,9 @@ export const projectData = [
     name: "Weather App",
     url: "http://weather-app-react-lyart.vercel.app/",
     image: weatherAppProjImg,
-    tech: "JavaScript, React.js, Redux, Context-API, REST-API.",
+    tech: "JavaScript, React.js, Redux, Context-API, REST-API, Geo-location API, swiper.js.",
     description:
-      "A real-time app that gives weather info by accessing your location or by search",
+      "A web application that provides users with real-time weather information based on their current location. The app uses a geo-location API to automatically detect the user's location and provide weather updates for that specific area.",
   },
   {
     name: "Personal Portfolio",
@@ -46,21 +46,21 @@ export const projectData = [
     image: portfolioImg,
     tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, Framer-motion, Intersection-observer API ",
     description:
-      "Personal portfolio website. Includes projects and contact info",
+      "Personal portfolio website. Includes, info about me, my technical abilities, projects and contact info",
   },
   {
     name: "Calculator App",
     url: "https://calculator-app-chucksn.vercel.app/",
     image: calculatorProjImg,
     tech: "HTML, Vanilla CSS, JavaScript",
-    description: "Calculator web app with advanced functionalities.",
+    description:
+      "A Calculator web application that functions just like a real calculator.",
   },
   {
     name: "Analog Clock Web App",
     url: "https://analog-clock-chucksn.vercel.app/",
     image: analogClockProjImg,
     tech: "HTML, Vanilla CSS, JavaScript",
-    description:
-      "Analog clock web app. Developed with HTML, CSS and JavaScript",
+    description: "Analog clock web application with manual setting adjustment.",
   },
 ];
