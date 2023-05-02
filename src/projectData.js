@@ -16,10 +16,10 @@ export const projectData = [
       "A web-based application that allows users to listen to radio stations from around the world. Streams Over 20,000 Internet Radio Stations in real time. Easy to use and has 'Search Country' and 'Add to favorite' features.",
   },
   {
-    name: "Movie Hub",
+    name: "Mv-Hub",
     url: "https://movie-app-chi-nine.vercel.app/",
     image: movieAppProjImg,
-    tech: "JavaScript, React.js, Redux,chakra-ui, Framer-motion, Swiper.js, REST-API.",
+    tech: "JavaScript, React.js, Redux, Tailwind, Swiper-react, REST-API.",
     description:
       "Movie streaming web application that can access a huge library of movies from different genres. Users can also browse movies by categories, search for specific titles, and create personalized watchlists.",
   },
