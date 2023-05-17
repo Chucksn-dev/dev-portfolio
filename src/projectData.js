@@ -8,20 +8,20 @@ import quizAppProjImg from "../src/assets/me/quiz-app.png";
 
 export const projectData = [
   {
+    name: "Mv-Hub",
+    url: "https://movie-app-chi-nine.vercel.app/",
+    image: movieAppProjImg,
+    tech: "JavaScript, React.js, Redux, Tailwind, Swiper-react, REST-API, Node.js, Express.js, MongoDB.",
+    description:
+      "A full-stack movie streaming web app that can access a huge library of movies from different genres. Users browse movies by categories or search for specific titles. Users can also create and delete personalized watchlists. Also has user login and sign-up features.",
+  },
+  {
     name: "World Radio",
     url: "https://chucksn.github.io/World-Radio/",
     image: radioAppProjImg,
     tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, Framer-motion, REST-API.",
     description:
       "A web-based application that allows users to listen to radio stations from around the world. Streams Over 20,000 Internet Radio Stations in real time. Easy to use and has 'Search Country' and 'Add to favorite' features.",
-  },
-  {
-    name: "Mv-Hub",
-    url: "https://movie-app-chi-nine.vercel.app/",
-    image: movieAppProjImg,
-    tech: "JavaScript, React.js, Redux, Tailwind, Swiper-react, REST-API.",
-    description:
-      "Movie streaming web application that can access a huge library of movies from different genres. Users can also browse movies by categories, search for specific titles, and create personalized watchlists.",
   },
   {
     name: "Trivia Titan",
