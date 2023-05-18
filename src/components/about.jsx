@@ -12,9 +12,8 @@ function About() {
         </div>
         <div className="about-text px-4 lg:px-8 mb-4 text-sm sm:text-lg font-medium">
           <span className="block">
-            I'm a Full-Stack Developer with over 2 years of programming
-            experience. I am passionate about creating innovative web
-            applications that solve complex problems and provide value to
+            I'm a Full-Stack Developer with a passionate for creating innovative
+            web applications that solve complex problems and provide value to
             end-users. I have a solid foundation in web development technologies
             such as HTML, CSS, and JavaScript, and have extensive experience
             working with frameworks such as React.js, Node.js, and Express.js.
