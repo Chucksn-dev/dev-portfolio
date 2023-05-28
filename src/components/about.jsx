@@ -18,10 +18,10 @@ function About() {
             such as HTML, CSS, and JavaScript, and have extensive experience
             working with frameworks such as React.js, Node.js, and Express.js.
             My expertise also includes working with databases such as MongoDB
-            and SQL, as well as implementing RESTful APIs and utilizing state
-            management tools such as Redux. As a quick learner and
-            problem-solver, I am constantly seeking new challenges to improve my
-            skills and knowledge.
+            and MySQL, as well as developing and implementing RESTful APIs, and
+            utilizing state management tools such as Redux. As a quick learner
+            and problem-solver, I am constantly seeking new challenges to
+            improve my skills and knowledge.
             <br />
             <br />
             I believe that great application development is all about striking a
