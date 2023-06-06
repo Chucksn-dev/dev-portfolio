@@ -38,9 +38,6 @@ function Footer({ darkMode }) {
         </a>
       </div>
       <div className="footer-text flex flex-col items-center  lg:mt-4">
-        <span className=" block text-sm font-medium lg:text-base">
-          Developed with ReactJS
-        </span>
         <span className=" block text-xs">
           Designed and Developed By Chucks N &#169;{year}
         </span>

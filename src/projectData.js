@@ -31,7 +31,7 @@ export const projectData = [
     name: "Trivia Titan",
     url: "https://trivia-titans.vercel.app/",
     image: quizAppProjImg,
-    features: "Search feature, timer feature",
+    features: "Search feature, Timer feature",
     tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, Framer-motion, REST-API.",
     description:
       "A dynamic quiz web app that offers users the opportunity to test their knowledge on a variety of subjects. The app typically features a range of quizzes, each with a set of questions and multiple choice answers.",
@@ -41,7 +41,7 @@ export const projectData = [
     name: "Weather App",
     url: "http://weather-app-react-lyart.vercel.app/",
     image: weatherAppProjImg,
-    features: "",
+    features: "Automatic location detection, Search feature",
     tech: "JavaScript, React.js, Redux, Context-API, REST-API, Geo-location API, swiper.js.",
     description:
       "A web application that provides users with real-time weather information based on their current location. The app uses a geo-location API to automatically detect the user's location and provide weather updates for that specific area.",
@@ -50,7 +50,7 @@ export const projectData = [
     name: "Personal Portfolio",
     url: "https://chucksn-portfolio.vercel.app/",
     image: portfolioImg,
-    features: "",
+    features: "About, Skills, Portfolio Projects, Contact",
     tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, Framer-motion, Intersection-observer API ",
     description:
       "Personal portfolio website. Includes, info about me, my technical abilities, projects and contact info",
@@ -59,7 +59,7 @@ export const projectData = [
     name: "Calculator App",
     url: "https://calculator-app-chucksn.vercel.app/",
     image: calculatorProjImg,
-    features: "",
+    features: "Continuous calculation feature",
     tech: "HTML, Vanilla CSS, JavaScript",
     description:
       "A Calculator web application that functions just like a real calculator.",
@@ -68,7 +68,7 @@ export const projectData = [
     name: "Analog Clock Web App",
     url: "https://analog-clock-chucksn.vercel.app/",
     image: analogClockProjImg,
-    features: "",
+    features: "Manual adjust feature",
     tech: "HTML, Vanilla CSS, JavaScript",
     description: "Analog clock web application with manual setting adjustment.",
   },
