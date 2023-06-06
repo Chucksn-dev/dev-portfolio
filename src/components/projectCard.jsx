@@ -1,4 +1,4 @@
-function ProjectCard({ project_Img, name, description, url, tech }) {
+function ProjectCard({ project_Img, name, description, url, tech, features }) {
   return (
     <a
       href={url}
@@ -12,8 +12,14 @@ function ProjectCard({ project_Img, name, description, url, tech }) {
           {name}
         </span>
       </div>
-      <span className="description block text-sm md:text-base text-center px-3 font-sans font-medium text-slate-400 dark:text-zinc-400 ">
+      <span className="description block text-sm md:text-base text-center px-3 font-sans font-medium text-slate-300 dark:text-zinc-300 ">
         {description}
+      </span>
+      <span className="feature block text-sm md:text-[15px] text-center px-3 font-sans font-medium text-teal-400 mt-2">
+        <span className="font-semibold text-green-600 md:text-base">
+          Features:
+        </span>{" "}
+        {features}
       </span>
       <span className="block text-sm md:text-[15px] text-center px-3 font-sans font-medium text-orange-300 mt-2">
         <span className="font-semibold text-blue-600 md:text-base">

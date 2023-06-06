@@ -2,7 +2,7 @@ import portfolioImg from "../src/assets/me/portfolio.png";
 import analogClockProjImg from "../src/assets/me/analog-clock.png";
 import calculatorProjImg from "../src/assets/me/calculator-app.png";
 import movieAppProjImg from "../src/assets/me/movie-app2.jpg";
-import radioAppProjImg from "../src/assets/me/radio-2.jpg";
+import radioAppProjImg from "../src/assets/me/radio-3.png";
 import weatherAppProjImg from "../src/assets/me/weather-app.png";
 import quizAppProjImg from "../src/assets/me/quiz-app.png";
 
@@ -11,25 +11,27 @@ export const projectData = [
     name: "Mv-Hub",
     url: "https://movie-app-chi-nine.vercel.app/",
     image: movieAppProjImg,
-    features: "",
-    tech: "JavaScript, React.js, Redux, Tailwind, Swiper-react, REST-API, Node.js, Express.js, MongoDB.",
+    features:
+      "Authentication-(Login/Sign-up), Authorization(powered by JWT), Logout, Watchlist(CRUD), Video modal",
+    tech: "JavaScript, React.js, Redux, Tailwind, Swiper-react, REST-API, Node.js, Express.js, MongoDB, Mongoose.",
     description:
-      "A full-stack movie streaming web app that can access a huge library of movies from different genres. Users browse movies by categories or search for specific titles. Users can also create and delete personalized watchlists. Also has user login and sign-up features.",
+      "A full-stack movie streaming web app that can access a huge library of movies from different genres. Users browse movies by categories or search for specific titles. Users can also create and delete personalized watchlists.",
   },
   {
     name: "World Radio",
     url: "https://world-radio.vercel.app/",
     image: radioAppProjImg,
-    features: "",
-    tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, Framer-motion, REST-API.",
+    features:
+      "Authentication-(Login/Sign-up), Authorization(powered by JWT), Logout, Search feature, Favorites(CRUD)",
+    tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, Framer-motion, REST-API, Node.js, Express.js, MongoDB, Mongoose.",
     description:
-      "A Full-stack web-based application that allows users to listen to radio stations from around the world. Streams Over 20,000 Internet Radio Stations in real time. Easy to use and has 'Search Country' and 'Add to favorite' features.",
+      "A Full-stack web-based application that allows users to listen to radio stations from around the world. Streams Over 20,000 Internet Radio Stations in real time. Easy to use with search feature.",
   },
   {
     name: "Trivia Titan",
     url: "https://trivia-titans.vercel.app/",
     image: quizAppProjImg,
-    features: "",
+    features: "Search feature, timer feature",
     tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, Framer-motion, REST-API.",
     description:
       "A dynamic quiz web app that offers users the opportunity to test their knowledge on a variety of subjects. The app typically features a range of quizzes, each with a set of questions and multiple choice answers.",

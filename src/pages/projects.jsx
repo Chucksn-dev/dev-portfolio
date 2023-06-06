@@ -57,6 +57,7 @@ function Projects() {
             name={data.name}
             project_Img={data.image}
             tech={data.tech}
+            features={data.features}
           />
         ))}
       </motion.div>

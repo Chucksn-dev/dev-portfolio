@@ -266,6 +266,7 @@ function Home() {
                   description={data.description}
                   name={data.name}
                   tech={data.tech}
+                  features={data.features}
                 />
               ))}
             </div>
