@@ -15,7 +15,7 @@ export const projectData = [
       "Authentication-(Login/Sign-up), Authorization(powered by JWT), Logout, Watchlist(CRUD), Video modal",
     tech: "JavaScript, React.js, Redux, Tailwind, Swiper-react, REST-API, Node.js, Express.js, MongoDB, Mongoose.",
     description:
-      "A full-stack movie streaming web app that can access a huge library of movies from different genres. Users browse movies by categories or search for specific titles. Users can also create and delete personalized watchlists.",
+      "A full-stack (MERN) movie streaming web app that can access a huge library of movies from different genres. Users browse movies by categories or search for specific titles. Users can also create and delete personalized watchlists.",
   },
   {
     name: "World Radio",
@@ -25,7 +25,7 @@ export const projectData = [
       "Authentication-(Login/Sign-up), Authorization(powered by JWT), Logout, Search feature, Favorites(CRUD)",
     tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, Framer-motion, REST-API, Node.js, Express.js, MongoDB, Mongoose.",
     description:
-      "A Full-stack web-based application that allows users to listen to radio stations from around the world. Streams Over 20,000 Internet Radio Stations in real time. Easy to use with search feature.",
+      "A Full-stack (MERN) web-based application that allows users to listen to radio stations from around the world. Streams Over 20,000 Internet Radio Stations in real time. Easy to use with search feature.",
   },
   {
     name: "Trivia Titan",
