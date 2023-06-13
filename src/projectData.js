@@ -23,7 +23,7 @@ export const projectData = [
     image: radioAppProjImg,
     features:
       "Authentication-(Login/Sign-up), Authorization(powered by JWT), Logout, Delete user account, Search feature, Favorites(CRUD), User-profile menu",
-    tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, Framer-motion, REST-API, Node.js, Express.js, MongoDB, Mongoose.",
+    tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, RTK-Query, Framer-motion, REST-API, Node.js, Express.js, MongoDB, Mongoose.",
     description:
       "A Full-stack (MERN) web-based application that allows users to listen to radio stations from around the world. Streams Over 20,000 Internet Radio Stations in real time. Easy to use with search feature.",
   },
