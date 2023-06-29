@@ -64,12 +64,12 @@ export const projectData = [
     description:
       "A Calculator web application that functions just like a real calculator.",
   },
-  {
-    name: "Analog Clock Web App",
-    url: "https://analog-clock-chucksn.vercel.app/",
-    image: analogClockProjImg,
-    features: "Manual adjust feature",
-    tech: "HTML, Vanilla CSS, JavaScript",
-    description: "Analog clock web application with manual setting adjustment.",
-  },
+  // {
+  //   name: "Analog Clock Web App",
+  //   url: "https://analog-clock-chucksn.vercel.app/",
+  //   image: analogClockProjImg,
+  //   features: "Manual adjust feature",
+  //   tech: "HTML, Vanilla CSS, JavaScript",
+  //   description: "Analog clock web application with manual setting adjustment.",
+  // },
 ];
