@@ -22,7 +22,7 @@ export const projectData = [
     url: "https://world-radio.vercel.app/",
     image: radioAppProjImg,
     features:
-      "Authentication-(Login/Sign-up), Authorization(powered by JWT), Logout, Delete user account, Search feature, Favorites(CRUD), User-profile menu",
+      "Authentication-(Google Login, Email Login/Sign-up), Authorization(powered by JWT), Google-Auth, Logout, Delete user account, Search feature, Favorites(CRUD), User-profile menu",
     tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, RTK-Query, Framer-motion, REST-API, Node.js, Express.js, MongoDB, Mongoose.",
     description:
       "A Full-stack (MERN) web-based application that allows users to listen to radio stations from around the world. Streams Over 20,000 Internet Radio Stations in real time. Easy to use with search feature.",
@@ -64,12 +64,4 @@ export const projectData = [
     description:
       "A Calculator web application that functions just like a real calculator.",
   },
-  // {
-  //   name: "Analog Clock Web App",
-  //   url: "https://analog-clock-chucksn.vercel.app/",
-  //   image: analogClockProjImg,
-  //   features: "Manual adjust feature",
-  //   tech: "HTML, Vanilla CSS, JavaScript",
-  //   description: "Analog clock web application with manual setting adjustment.",
-  // },
 ];
