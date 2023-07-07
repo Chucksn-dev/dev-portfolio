@@ -162,7 +162,7 @@ function Home() {
             </span>
             <div className="languages my-4 md:my-8">
               <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
-                Languages
+                Programming Languages
               </span>
               <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
                 {iconData.map((data, index) => {
@@ -179,28 +179,11 @@ function Home() {
             </div>
             <div className="frameworks my-4 md:my-8">
               <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
-                Frameworks
+                Frontend
               </span>
               <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
                 {iconData.map((data, index) => {
-                  if (data.type === "framework")
-                    return (
-                      <Icon
-                        key={index}
-                        icon_name={data.name}
-                        icon={data.path}
-                      />
-                    );
-                })}
-              </div>
-            </div>
-            <div className="tools my-4 md:my-8">
-              <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
-                Dev Tools
-              </span>
-              <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
-                {iconData.map((data, index) => {
-                  if (data.type === "others")
+                  if (data.type === "frontend")
                     return (
                       <Icon
                         key={index}
@@ -235,6 +218,23 @@ function Home() {
               <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
                 {iconData.map((data, index) => {
                   if (data.type === "database")
+                    return (
+                      <Icon
+                        key={index}
+                        icon_name={data.name}
+                        icon={data.path}
+                      />
+                    );
+                })}
+              </div>
+            </div>
+            <div className="tools my-4 md:my-8">
+              <span className="block m-4 text-center font-unbounded text-lg text-yellow-800 dark:text-yellow-600">
+                Dev Tools
+              </span>
+              <div className="skills-icon flex flex-wrap justify-center gap-4 md:gap-8 font-sans font-medium">
+                {iconData.map((data, index) => {
+                  if (data.type === "others")
                     return (
                       <Icon
                         key={index}
