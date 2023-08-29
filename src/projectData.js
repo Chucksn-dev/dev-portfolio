@@ -1,5 +1,4 @@
 import portfolioImg from "../src/assets/me/portfolio.png";
-import analogClockProjImg from "../src/assets/me/analog-clock.png";
 import calculatorProjImg from "../src/assets/me/calculator-app.png";
 import movieAppProjImg from "../src/assets/me/movie-app2.jpg";
 import radioAppProjImg from "../src/assets/me/radio-3.png";
@@ -8,16 +7,6 @@ import quizAppProjImg from "../src/assets/me/quiz-app.png";
 
 export const projectData = [
   {
-    name: "Mv-Hub",
-    url: "https://movie-app-chi-nine.vercel.app/",
-    image: movieAppProjImg,
-    features:
-      "Authentication-(Login/Sign-up), Authorization(powered by JWT), Logout, Delete user account, Watchlist(CRUD), User-profile menu, Video modal",
-    tech: "JavaScript, React.js, Redux, Tailwind, Swiper-react, REST-API, Node.js, Express.js, MongoDB, Mongoose.",
-    description:
-      "A full-stack (MERN) movie streaming web app that can access a huge library of movies from different genres. Users browse movies by categories or search for specific titles. Users can also create and delete personalized watchlists.",
-  },
-  {
     name: "World Radio",
     url: "https://world-radio.vercel.app/",
     image: radioAppProjImg,
@@ -25,8 +14,20 @@ export const projectData = [
       "Authentication-(Google Login, Email Login/Sign-up), Authorization(powered by JWT), Google-Auth, Logout, Delete user account, Search feature, Favorites(CRUD), User-profile menu",
     tech: "JavaScript, React.js, Redux-Toolkit, Tailwind, RTK-Query, Framer-motion, REST-API, Node.js, Express.js, MongoDB, Mongoose.",
     description:
-      "A Full-stack (MERN) web-based application that allows users to listen to radio stations from around the world. Streams Over 20,000 Internet Radio Stations in real time. Easy to use with search feature.",
+      "A Full-stack web-based application that allows users to listen to radio stations from around the world. Streams Over 20,000 Internet Radio Stations in real time. Easy to use with search feature.",
   },
+
+  {
+    name: "Mv-Hub",
+    url: "https://movie-app-chi-nine.vercel.app/",
+    image: movieAppProjImg,
+    features:
+      "Authentication-(Login/Sign-up), Authorization(powered by JWT), Logout, Delete user account, Watchlist(CRUD), User-profile menu, Video modal",
+    tech: "JavaScript, React.js, Redux, Tailwind, Swiper-react, REST-API, Node.js, Express.js, MongoDB, Mongoose.",
+    description:
+      "A full-stack movie streaming web app that can access a huge library of movies from different genres. Users browse movies by categories or search for specific titles. Users can also create and delete personalized watchlists.",
+  },
+
   {
     name: "Trivia Titan",
     url: "https://trivia-titans.vercel.app/",
