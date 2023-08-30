@@ -7,7 +7,7 @@ function About() {
         ABOUT ME
       </span>
       <div className="about-content flex text-center  sm:justify-center flex-wrap xl:flex-nowrap w-full sm:text-justify">
-        <div className="img-container min-w-72 rounded-xl p-4 mb-4  dark:bg-slate-800 sm:w-3/5 xl:w-full xl:max-w-72 flex items-center">
+        <div className="img-container min-w-72 rounded-xl p-4 mb-4  dark:bg-slate-700 sm:w-3/5 xl:w-full xl:max-w-72 flex items-center">
           <img src={myPic} alt="me" className="rounded-full" />
         </div>
         <div className="about-text px-4 lg:px-8 mb-4 text-sm sm:text-lg font-medium">
